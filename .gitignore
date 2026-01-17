@@ -1,0 +1,12 @@
+__pycache__/
+.idea/
+.DS_Store
+
+.vscode/
+
+*.out
+*.exe
+*.o
+*.obj
+*.log
+*.tmp
