@@ -17,7 +17,6 @@ void func(int arr[] , int l , int r){
 
 
 
-
 int main(){
     
     int n;

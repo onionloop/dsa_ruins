@@ -14,7 +14,6 @@ void func(int i , int arr[], int n){
 }
 
 
-
 int main(){
 
 
@@ -30,8 +29,8 @@ int main(){
     func(0, arr, n );
 
     for(int i = 0 ; i < n ; i++){
-        cout << arr[i];
+        cout << arr[i]<< " ";
     }
-    
+
 
 }

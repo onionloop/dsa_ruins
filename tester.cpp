@@ -3,23 +3,34 @@
 using namespace std;
 
 
-int func(int n){
+void rev(int arr[], int l , int r){
 
-    if (n == 1 ) return 1;
+    if (l >= r) return;
 
-    return n * func(n-1);
+    swap(arr[l] , arr[r]);
+
+    rev(arr, l+1 , r-1);
 
 }
-
-
-
 
 int main(){
 
     int n;
     cin >> n;
 
+    int arr[n];
 
-    cout << func(n);
+    for(int i =0 ; i < n ; i++){
+        cin >> arr[i];
+    }
+
+    rev(arr, 0 , n-1);
+
+    for(int i =0 ; i < n ; i++){
+        cout << arr[i] << " ";
+    }
+
 
 }
+
+
