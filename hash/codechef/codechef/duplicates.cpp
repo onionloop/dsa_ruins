@@ -1,5 +1,8 @@
 #include <iostream>
 using namespace std;
+#include <vector>
+#include <map>
+
 
 
 int main(){
@@ -13,24 +16,26 @@ int main(){
         cin >> arr[i];
     }
 
-    unordered_map<int , int> count;
+    map<int , int> count;
 
     for(int i =0 ; i < n ; i++){
         count[arr[i]]++;
     }
 
-    int max = 0;
-    int element;
+
+    int duplicate = -1;
 
     for(auto ans : count){
-        if (ans.second > max) {
-            max = ans.second ;
-            element = ans.first;
+        if (ans.second > 1){
+            duplicate = ans.first;
+            break;
+        }
+        
     }
 
+    if (duplicate == -1) cout << "No Duplicates found";
+    else cout << duplicate;
     
-}
-    cout << max << endl << element;
     return 0;
 
 }
