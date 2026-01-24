@@ -1,43 +1,40 @@
+// Swapping using recrusion
+
 #include <iostream>
-#include <vector>
 using namespace std;
 
-void reverse(vector <int> & arr , int i , int n){
+void func(int arr[] , int l , int r){
 
-    
-    if (i >= n/2) return;
+    if (l >= r) return;
 
-    swap(arr[i] , arr[n - i - 1]);
+    swap(arr[l], arr[r]);
 
-    return reverse(arr, i+1 , n);
+    func(arr , l+1, r-1);
+
+
 
 }
 
 
+
 int main(){
-
+    
     int n;
-    cin >> n;
+    cout << "Enter the size of the array: ";
+    cin >>  n;
 
-    vector <int> arr(n);
+
+    int arr[n];
 
     for(int i = 0 ; i < n ; i++){
         cin >> arr[i];
     }
 
-    cout << "Before Swap\n";
-    for(int i = 0 ; i < n ; i++){
-        cout << arr[i];
-    }
-
-    reverse(arr, 0 , n);
-    cout << endl;
-
-    cout << "After Swap\n";
+    func(arr, 0 , n -1);
 
     for(int i = 0 ; i < n ; i++){
-        cout << arr[i];
+        cout << arr[i] << " ";
     }
 
-    return 0;
+
 }

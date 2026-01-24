@@ -1,43 +1,28 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-void reverse(vector <int> & arr , int i , int n){
+bool palindrome(string s,  int i){
 
-    
-    if (i >= n/2) return;
+    int n = s.length();
+    if(i >= n/2) return true;
 
-    swap(arr[i] , arr[n - i - 1]);
+    if(s[i] != s[n - i -1]) return false;
 
-    return reverse(arr, i+1 , n);
+    return palindrome(s, i+1);
+
+
 
 }
+
+    
 
 
 int main(){
 
-    int n;
-    cin >> n;
+    string s;
+    cin >> s;
 
-    vector <int> arr(n);
+    cout << palindrome(s , 0);
 
-    for(int i = 0 ; i < n ; i++){
-        cin >> arr[i];
-    }
-
-    cout << "Before Swap\n";
-    for(int i = 0 ; i < n ; i++){
-        cout << arr[i];
-    }
-
-    reverse(arr, 0 , n);
-    cout << endl;
-
-    cout << "After Swap\n";
-
-    for(int i = 0 ; i < n ; i++){
-        cout << arr[i];
-    }
-
-    return 0;
+    
 }
