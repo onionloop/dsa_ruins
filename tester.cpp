@@ -1,36 +1,43 @@
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
+void reverse(vector <int> & arr , int i , int n){
 
-void rev(int arr[], int l , int r){
+    
+    if (i >= n/2) return;
 
-    if (l >= r) return;
+    swap(arr[i] , arr[n - i - 1]);
 
-    swap(arr[l] , arr[r]);
-
-    rev(arr, l+1 , r-1);
+    return reverse(arr, i+1 , n);
 
 }
+
 
 int main(){
 
     int n;
     cin >> n;
 
-    int arr[n];
+    vector <int> arr(n);
 
-    for(int i =0 ; i < n ; i++){
+    for(int i = 0 ; i < n ; i++){
         cin >> arr[i];
     }
 
-    rev(arr, 0 , n-1);
-
-    for(int i =0 ; i < n ; i++){
-        cout << arr[i] << " ";
+    cout << "Before Swap\n";
+    for(int i = 0 ; i < n ; i++){
+        cout << arr[i];
     }
 
+    reverse(arr, 0 , n);
+    cout << endl;
 
+    cout << "After Swap\n";
+
+    for(int i = 0 ; i < n ; i++){
+        cout << arr[i];
+    }
+
+    return 0;
 }
-
-
