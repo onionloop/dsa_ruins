@@ -22,6 +22,7 @@ int main(){
     int max = 0;
     int element;
 
+    
     for(auto ans : count){
         if (ans.second > max) {
             max = ans.second ;
