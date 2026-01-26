@@ -14,5 +14,5 @@ int main(){
 
     unordered_map <int , int> freq;
 
-    
+    for(auto ans : )
 }
