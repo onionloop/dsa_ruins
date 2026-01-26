@@ -14,5 +14,12 @@ int main(){
 
     unordered_map <int , int> freq;
 
-    for(auto ans : )
+    for(int i = 0 ; i < n; i++){
+        freq[arr[i]]++;
+    }
+    
+    
+    for(auto ans : freq ){
+        cout << ans.first << " " << ans.second << endl;
+    }
 }
