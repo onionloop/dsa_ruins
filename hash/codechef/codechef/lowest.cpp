@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <climits>
 using namespace std;
 
 int main(){
@@ -19,17 +22,19 @@ int main(){
     }
 
 
-    int min = 0;
+    int minFreq = INT_MAX;
     int element;
 
     for(auto ans : count){
         
         
-        if (min > ans.second){
-            min = ans.second;
+        if (minFreq > ans.second){
+            minFreq = ans.second;
+            element = ans.first;    
+        
 
         }
     }
 
-    cout << min << endl;
+    cout << "Min Appeared Element is : " << element << " " <<  "With the frequency of " << minFreq << endl;
 }
