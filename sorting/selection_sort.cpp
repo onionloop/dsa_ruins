@@ -1,36 +1,31 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 
-void selection(vector <int> &a , int n){
+void selection(vector <int> &arr , int n){
 
-    for(int i  = 0 ; i < n -1; i++){
+    for(int i = 0 ; i < n ; i++){
         int min = i;
-        for(int j = i + 1; j < n; j++){
-            if( a[j] < a[min]){
+        for(int j = i+1; j < n-1; j++){
+            if(arr[j] < arr[min]){
                 min = j;
             }
         }
-        swap(a[i], a[min]); 
+        swap(arr[i], arr[min]);
     }
-    
-
-    for(int i = 0 ; i < n ; i++){
-        cout << a[i] << " ";
+    for (int i =0 ; i < n ; i++){
+        cout << arr[i] << " ";
     }
-    
 }
 
 int main(){
-    int n;
-    cin >> n;
 
-    vector <int> arr(n);
-
-    for(int i = 0 ; i  < n ; i++){
-        cin >> arr[i];
+    int n; cin >> n;
+    vector <int> a[i];
+    for(int i =0 ; i < n ; i++){
+        cin >> a[i];
     }
 
-    selection(arr, n);
+
+    selection(a , n);
 }
