@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 
@@ -21,7 +22,8 @@ void selection(vector <int> &arr , int n){
 int main(){
 
     int n; cin >> n;
-    vector <int> a[i];
+    vector <int> a(n);
+    
     for(int i =0 ; i < n ; i++){
         cin >> a[i];
     }
