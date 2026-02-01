@@ -16,7 +16,7 @@ int main(){
     }
 
 
-    for(vector <int>:: reverse_iterator it = vec.rbegin() ; it != vec.rend() ; ++it ){
+    for(auto it = vec.rbegin() ; it != vec.rend() ; ++it ){
         cout << *it << " ";
     }
 }
