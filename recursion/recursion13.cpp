@@ -24,6 +24,8 @@ int bin(vector <int> &v, int low , int high, int target){
 }
 
 
+
+
 int main(){
 
     int n; cin >> n;
