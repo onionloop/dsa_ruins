@@ -2,32 +2,31 @@
 #include <vector>
 using namespace std;
 
+void selection(vector <int> &v , int n){
 
-void selection(vector <int> &arr , int n){
+    for(int i =0 ; i < n - 1 ; i++){
+        int min = i;
+        for(int j = i + 1 ; j < n ; j++){
+            if(v[j] < v[min]) min = j;
+        }
+        swap(v[i], v[min]);
+    }
 
     for(int i = 0 ; i < n ; i++){
-        int min = i;
-        for(int j = i+1; j < n-1; j++){
-            if(arr[j] < arr[min]){
-                min = j;
-            }
-        }
-        swap(arr[i], arr[min]);
+        cout << v[i] << " ";
     }
-    for (int i =0 ; i < n ; i++){
-        cout << arr[i] << " ";
-    }
+
 }
 
 int main(){
-
     int n; cin >> n;
-    vector <int> a(n);
-    
-    for(int i =0 ; i < n ; i++){
-        cin >> a[i];
+    vector <int> v(n);
+
+    for(int i = 0; i < n ; i++){
+        cin >> v[i];
     }
 
-
-    selection(a , n);
+    selection(v, n);
 }
+
+// Time Complx o(2^n)
