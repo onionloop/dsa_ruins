@@ -1,24 +1,38 @@
 #include <iostream>
-#include <queue>
+#include <vector>
 using namespace std;
+
+
+void selection(vector <int> &v, int n){
+
+    for(int i = 0 ; i < n - 1; i++){
+        int min = i;
+        for(int j = i + 1 ; j < n ; j++){
+            if (v[j] < v[min]){
+                min = j;
+            }   
+        }
+        swap(v[i] , v[min]);
+    }
+    for(int i =0 ; i < n ; i++){
+        cout << v[i] << " ";
+    }
+
+    
+
+}
 
 
 int main(){
 
-    queue <int> q;
+    int n;
+    cin >> n;
 
-    q.push(5);
-    q.push(10);
-    q.push(15);
+    vector <int> arr(n);
 
-    q.emplace(20);
-
-
-    while(!q.empty()){
-        cout << q.front() << " ";
-        q.pop();
+    for(int i = 0 ; i < n ; i++){
+        cin >> arr[i];
     }
 
-    return 0;
-
+    selection(arr, n);
 }
