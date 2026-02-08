@@ -4,6 +4,14 @@
 #include <iostream>
 using namespace std;
 
+
+int insertion(vector <int> & v , )
+
+
+
+
 int main(){
     
+
+
 }
