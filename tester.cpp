@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+/*
 void reverseA(vector <int> &v , int l , int r){
 
     swap(v[l],  v[r]);
@@ -37,4 +39,14 @@ int main(){
         cout << arr[i] << " ";
     }
 
+}
+
+*/
+
+
+int main(){
+    int n;
+    cin >> n;
+
+    vector <int > 
 }
