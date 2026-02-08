@@ -5,13 +5,37 @@
 using namespace std;
 
 
-int insertion(vector <int> & v , )
+void insertion(vector <int> & v , int n){
+
+    for(int i =0 ; i < n ; i++){
+
+        int j = v[i];
+
+        while(j > 0 && v[j-1] > v[j]){
+            swap(v[j] , v[j-1]);
+            j--;
+        }
+    }
 
 
+    for(int i =0 ; i < n ; i++){
+        cout << v[i] << " ";
+    }
+   
+}
 
 
 int main(){
     
+    int n;
+    cin >> n;
+    
+    vector <int> v(n);
 
+    for(int i =0 ; i < n ; i++){
+        cin >> v[i];
+    }
+
+    insertion(v , n);
 
 }
