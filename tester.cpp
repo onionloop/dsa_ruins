@@ -1,17 +1,40 @@
 #include <iostream>
 using namespace std;
 
+void reverseA(vector <int> &v , int l , int r){
+
+    swap(v[l],  v[r]);
+
+    while(l < r){
+    
+        l++;
+        r--;
+    }
+
+    return;
+
+}
+
 int main(){
 
+    int n; cin >> n;
 
+    vector <int> arr(n);
 
-    long long n = 368000;
-    long long result = 0;
-    for(long long i  =0 ; i <= n ; i += 2){
-        result += i * i;
-
+    for(int i =0 ; i < n ; i++){
+        cin >> arr[i];
     }
-    cout << result << endl;
 
-    return 0;
+
+
+
+
+    reverseA(arr , 0 , n-1);
+
+
+
+     for(int i =0 ; i < n ; i++){
+        cout << arr[i] << " ";
+    }
+
 }

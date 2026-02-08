@@ -7,18 +7,16 @@ using namespace std;
 
 void insertion(vector <int> & v , int n){
 
-    for(int i =0 ; i < n ; i++){
-
-        int j = v[i];
+    for(int i =0 ; i < n ; i ++){
+        int j = i;
 
         while(j > 0 && v[j-1] > v[j]){
-            swap(v[j] , v[j-1]);
+            swap(v[j-1], v[j]);
             j--;
         }
     }
 
-
-    for(int i =0 ; i < n ; i++){
+    for(int i =0 ;i < n ; i ++){
         cout << v[i] << " ";
     }
    
