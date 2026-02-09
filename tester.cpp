@@ -141,15 +141,13 @@ int main(){
 */
 
 void moveZeros(vector <int> &v , int n){
-    int last = 0;
-    for(int i =0 ; i < n ; i++){
-        if(v[i] == 0){
-            last = v[i];
-            v.push_back(last);
+    int j = 0;
+
+    for(int i = 0 ; i < n ; i++){
+        if(v[j] != 0){
+            v[j++] = v[i];
         }
     }
-
-
     for(int i =0 ; i < n ; i++){
         cout << v[i] << " " ;
     }
