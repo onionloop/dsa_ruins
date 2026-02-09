@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <climits>
 using namespace std;
 
@@ -134,6 +135,6 @@ int main(){
         cin >> v[i];
     }
 
-    sorted(v , n );
+    cout << sorted(v , n );
 
 }
