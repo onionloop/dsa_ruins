@@ -29,4 +29,4 @@ int main(){
     selection(v, n);
 }
 
-// Time Complx o(2^n)
+// Time Complx o(n^2)

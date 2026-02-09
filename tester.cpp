@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
 
@@ -42,11 +43,16 @@ int main(){
 }
 
 */
-
+/*
 
 int main(){
     int n;
     cin >> n;
+
+    if(n < 2){
+        cout << "No second largest exist";
+        return 0;
+    }
 
     vector <int > arr(n);
 
@@ -54,8 +60,8 @@ int main(){
         cin >> arr[i];
     }
 
-    int largest = 0;
-    int second_largest = 0;
+    int largest = INT_MIN;
+    int second_largest = INT_MIN;
     for(int i =0 ; i < n ; i++){
 
         if(arr[i] > largest ){ 
@@ -72,4 +78,35 @@ int main(){
 
 
     return 0;
+}
+
+*/
+
+bool sorted(vector <int> &v , int n){
+    for(int i = 0 ; i < n ; i++){
+        int min = i;
+
+        for(int j = i+ 1 ; j < n ; j++ ){
+            if(v[j] > v[i]) return true;
+        }
+
+    }
+    return false;
+}
+
+
+
+int main(){
+
+    int n = 3;
+   // cin >> n;
+
+    vector <int> v(n);
+
+    for(int i =0 ; i < n ; i++){
+        cin >> v[i];
+    }
+
+    cout << sorted(v , n);
+
 }
