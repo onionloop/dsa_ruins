@@ -113,7 +113,6 @@ int main(){
 
 }
 
-*/
 
 bool sorted(vector <int> &v , int n){
 
@@ -137,4 +136,37 @@ int main(){
 
     cout << sorted(v , n );
 
+}
+
+*/
+
+void moveZeros(vector <int> &v , int n){
+    int last = 0;
+    for(int i =0 ; i < n ; i++){
+        if(v[i] == 0){
+            last = v[i];
+            v.push_back(last);
+        }
+    }
+
+
+    for(int i =0 ; i < n ; i++){
+        cout << v[i] << " " ;
+    }
+}
+
+
+int main(){
+    int n;
+    cin >> n;
+
+    vector <int> v(n);
+
+    for(int i= 0 ; i < n ; i++){
+        cin >> v[i];
+    }
+
+    moveZeros(v , n);
+
+    return 0;
 }
