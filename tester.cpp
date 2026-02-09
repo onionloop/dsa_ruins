@@ -144,10 +144,16 @@ void moveZeros(vector <int> &v , int n){
     int j = 0;
 
     for(int i = 0 ; i < n ; i++){
-        if(v[j] != 0){
+        if(v[i] != 0){
             v[j++] = v[i];
         }
     }
+
+    while( j < n){
+        v[j++] = 0;
+    }
+
+
     for(int i =0 ; i < n ; i++){
         cout << v[i] << " " ;
     }
@@ -164,6 +170,7 @@ int main(){
         cin >> v[i];
     }
 
+    
     moveZeros(v , n);
 
     return 0;
