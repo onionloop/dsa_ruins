@@ -82,6 +82,7 @@ int main(){
 
 */
 
+/*
 bool sorted(vector <int> &v , int n){
     for(int i = 0 ; i < n ; i++){
         int min = i;
@@ -108,5 +109,31 @@ int main(){
     }
 
     cout << sorted(v , n);
+
+}
+
+*/
+
+bool sorted(vector <int> &v , int n){
+
+    for(int i =0 ; i < n ; i++){
+        if (v[i] > v[i+1]) return false;
+    }
+
+    return true;
+
+}
+
+
+int main(){
+    int n = 3;
+
+    vector <int> v(n);
+
+    for(int i =0 ; i < n ; i++){
+        cin >> v[i];
+    }
+
+    sorted(v , n );
 
 }
