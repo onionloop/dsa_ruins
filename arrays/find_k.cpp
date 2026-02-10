@@ -5,10 +5,31 @@ using namespace std;
 bool find_k(vector <int> &v , int n , int target){
 
         int left = 0;
-        int right = n -1 ;
+        int right = n - 1;
 
-    
-    
+        while(left < right){
+
+            int sum = v[left] + v[right];
+
+            if(sum == target) return true;
+
+            else if (sum < target){
+                left++;
+
+            }
+
+            else{
+                right--;
+            }
+
+
+        }
+
+
+        return false;
+
+
+
 }
 
 
@@ -28,7 +49,7 @@ int main(){
     }
 
 
-    find_k(v , n , target);
+    cout << find_k(v , n , target);
 
     return 0;
 }
