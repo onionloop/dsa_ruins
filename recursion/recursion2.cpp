@@ -10,7 +10,6 @@ void func(int i ,int  n){
 
 }
 
-
 int main(){
 
     
