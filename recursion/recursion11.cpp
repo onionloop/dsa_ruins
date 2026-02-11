@@ -1,36 +1,25 @@
 #include <iostream>
-
 using namespace std;
 
-void func(int i , int arr[], int n){
+bool palindrome(string s,  int i){
 
-    if (i > n/2) return;
+    int n = s.length();
+    if(i >= n/2) return true;
 
-    swap(arr[i], arr[n-i-1]);
+    if(s[i] != s[n - i -1]) return false;
 
-    func(i+1 , arr, n); 
+    return palindrome(s, i+1);
+
 
 
 }
 
-
 int main(){
 
+    string s;
+    cin >> s;
 
-    int n;
-    cin >> n;
+    cout << palindrome(s , 0);
 
-    int arr[n];
-
-    for(int i = 0 ; i < n ; i++){
-        cin >> arr[i];
-    }
-
-    func(0, arr, n );
-
-    for(int i = 0 ; i < n ; i++){
-        cout << arr[i]<< " ";
-    }
-
-
+    
 }
