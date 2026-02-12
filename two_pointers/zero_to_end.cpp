@@ -3,9 +3,12 @@
 using namespace std;
 
 void moveZeros(vector <int> &v , int n){
+    
+    int j = 0;
+    
 
     for(int i =0 ; i < n ; i++){
         v[j++] = v[i];
-        
+
     }
 }
