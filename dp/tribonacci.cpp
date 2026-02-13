@@ -16,4 +16,18 @@ int tribo(int n){
         v[i] = v[n - 1] + v[n - 2] + v[n -3];
     }
 
+
+    return v[n];
+
+}
+
+
+int main(){
+
+    int n;
+    cin >> n;
+
+    cout << tribo(n) << endl;
+
+    return 0;
 }
