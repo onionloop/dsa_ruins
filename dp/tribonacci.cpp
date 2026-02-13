@@ -2,10 +2,7 @@
 #include <vector>
 using namespace std;
 
-int tribo(vector <int> &v , int n){
+int tribo(int n){
 
 
-
-
-    
 }
