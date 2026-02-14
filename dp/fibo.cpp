@@ -8,7 +8,7 @@ int fibo(int n){
     int first = 0;
     int second = 1;
 
-    for(int i =0 ; i < n ; i++){
+    for(int i =2 ; i < n ; i++){
         int next = first + second;
         first = second;
         second = next;
@@ -22,7 +22,7 @@ int main(){
     int x;
     cin >> x;
 
-    fibo(x);
+    cout << fibo(x);
 
     return 0;
 }
