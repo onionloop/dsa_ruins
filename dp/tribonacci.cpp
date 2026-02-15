@@ -22,6 +22,7 @@ int tribo(int n){
 }
 
 
+
 int main(){
 
     int n;
