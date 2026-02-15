@@ -18,7 +18,6 @@ int main(){
         freq[arr[i]]++;
     }
     
-    
     for(auto ans : freq ){
         cout << ans.first << " " << ans.second << endl;
     }
