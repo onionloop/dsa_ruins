@@ -15,7 +15,6 @@ void moveZeros(vector <int> &v , int n){
     while(j < n){
         v[j++] = 0;
     }
-
     
 }
 
