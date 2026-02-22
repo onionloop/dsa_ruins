@@ -16,7 +16,8 @@ int tribo(int n){
         b = c;
         c = next;
     }
-
+    
+    return c;
 }
 
 
