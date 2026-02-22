@@ -3,8 +3,6 @@ using namespace std;
 #include <vector>
 #include <map>
 
-
-
 int main(){
 
     int n;
@@ -21,7 +19,6 @@ int main(){
     for(int i =0 ; i < n ; i++){
         count[arr[i]]++;
     }
-
 
     int duplicate = -1;
 
