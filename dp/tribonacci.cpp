@@ -10,6 +10,13 @@ int tribo(int n){
     int b = 1;
     int c = 1;
 
+    for(int i =0 ; i < n ;i++){
+        int next = a + b + c;
+        a = b;
+        b = c;
+        c = next;
+    }
+
 }
 
 
