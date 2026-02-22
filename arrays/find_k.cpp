@@ -33,7 +33,6 @@ bool find_k(vector <int> &v , int n , int target){
 }
 
 
-
 int main(){
     int target;
     cout << "Enter the target: ";
