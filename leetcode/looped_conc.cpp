@@ -8,6 +8,8 @@ vector <int> conc(vector <int> &v){
 
     ans.insert(ans.end(), v.begin() , v.end());
 
+    // Inser = (WHERE , FROM , TO)
+
     return ans;
 }
 
