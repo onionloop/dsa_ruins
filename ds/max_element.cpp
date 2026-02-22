@@ -1,4 +1,8 @@
 #include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <climits>
+
 using namespace std;
 
 
@@ -19,11 +23,11 @@ int main(){
         count[arr[i]]++;
     }
 
-    int max = 0;
-    int element;
+    int max = INT_MIN;
+    int element = -1;
 
     
-    for(auto ans : count){
+    for(auto &ans : count){
         if (ans.second > max) {
             max = ans.second ;
             element = ans.first;

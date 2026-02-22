@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <unordered_map>
 using namespace std;
 
 int main(){
@@ -19,6 +21,6 @@ int main(){
     }
     
     for(auto ans : freq ){
-        cout << ans.first << " " << ans.second << endl;
+        cout << ans.first << "->" << ans.second << endl;
     }
 }
