@@ -14,25 +14,19 @@ int main(){
         cin >> arr[i];
     }
 
-    map<int , int> count;
+    unordered_map<int , int> count;
 
     for(int i =0 ; i < n ; i++){
         count[arr[i]]++;
-    }
 
-    int duplicate = -1;
-
-    for(auto ans : count){
-        if (ans.second > 1){
-            duplicate = ans.first;
-            break;
+        if(count[arr[i]] > 1){
+            cout << arr[i];
+            return 0;
         }
-        
     }
 
-    if (duplicate == -1) cout << "No Duplicates found";
-    else cout << duplicate;
-    
+    cout << "No Duplicates found";
+        
     return 0;
 
 }
