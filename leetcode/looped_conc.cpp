@@ -8,7 +8,9 @@ vector <int> conc(vector <int> &v){
 
     ans.insert(ans.end(), v.begin() , v.end());
 
-    // Inser = (WHERE , FROM , TO)
+    // Insert = (WHERE , FROM , TO)
+    // Getline = (cin , varibale_name) - to read the string in one go
+    
 
     return ans;
 }

@@ -2,13 +2,16 @@
 using namespace std;
 
 
-int isPrime(int A) {
-	int upperLimit = (int)(sqrt(A));
-	int i;
-	for (i = 2; i < upperLimit; i++) {
-		if (i <  A && A % i == 0) return 1;
+bool isPrime(int A) {
+
+	if(A <= 1) return false;
+
+	int upperLimit = sqrt(A);
+	
+	for (int i  = 2; i <= upperLimit; i++) {
+		if (A % i == 0) return false;
 	}
-	return 0;
+	return true;
 }
 
 
