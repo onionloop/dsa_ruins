@@ -9,7 +9,26 @@ int maxProfit(vector <int> &v){
     int maxP = 0;
 
     for(int i =0 ; i < n ; i++){
-        int cost = prices[i] - mini;
-        maxP = 
+        int cost = v[i] - mini;
+        maxP = max(cost , maxP);
+        mini = min(v[i] , mini);
     }
+
+    return maxP;
+}
+
+int main(){
+
+    int n;
+    cin >> n;
+
+    vector <int> v(n);
+    for(int i =0 ; i < n ; i++){
+        cin >> v[i];
+
+    }
+
+    cout << maxProfit(v) << endl;
+
+    return 0;
 }
