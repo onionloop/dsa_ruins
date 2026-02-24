@@ -28,5 +28,5 @@ int main(){
 
     selection(v, n);
 }
-
+// Compares left to right get smaller from the left side as the finds the minimum one and swaps it with the first index present on the first index nd goes so on
 // Time Complx o(n^2)

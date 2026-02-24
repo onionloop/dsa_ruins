@@ -18,9 +18,7 @@ void bubble_sort(vector <int> &v, int n){
     if (swapO == 0) break;
 }
 
-    for(int i =0 ; i < n ; i++){
-        cout << v[i] << " ";
-    }
+    
 
 }
 
@@ -33,4 +31,8 @@ int main(){
     }
 
     bubble_sort(v, n);
+
+    for(int i =0 ; i < n ; i++){    
+        cout << v[i] << " ";
+    }
 }
