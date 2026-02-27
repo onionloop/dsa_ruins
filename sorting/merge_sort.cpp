@@ -9,5 +9,7 @@ void mergeS(vector <int> &v , int low , int high){
 
     if(low >= high) return ;
 
-    mergeS(v , )
+    mergeS(v , low , mid);
+    mergeS(v, mid+1 , high);
+    
 }
