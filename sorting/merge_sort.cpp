@@ -3,6 +3,12 @@
 #include <algorithm>
 using namespace std; 
 
+void merge(vector<int> &v , int low, int mid , int high){
+    
+}
+
+
+
 void mergeS(vector <int> &v , int low , int high){
 
     int mid = (low + high) / 2;
@@ -11,5 +17,6 @@ void mergeS(vector <int> &v , int low , int high){
 
     mergeS(v , low , mid);
     mergeS(v, mid+1 , high);
-    
+
+    merge(v , low, mid , high);
 }
