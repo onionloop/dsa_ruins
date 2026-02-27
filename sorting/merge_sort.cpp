@@ -1,10 +1,13 @@
 #include <iostream>
-using namespace std;
+#include <vector>
+#include <algorithm>
+using namespace std; 
 
+void mergeS(vector <int> &v , int low , int high){
 
-int merge_sort(int arr , int low , int high){
-    int mid = (low+ high) / 2;
+    int mid = (low + high) / 2;
 
+    if(low >= high) return ;
 
-    merge_sort(arr, low, high);
+    mergeS(v , )
 }
