@@ -1,23 +1,21 @@
 // Takes an element and places it in correct order
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-void insertion(vector <int> & v , int n){
+void insertion(vector <int> &v, int n){
 
-    for(int i =0 ; i < n ; i ++){
+    for(int i =0 ; i < n ; i++){
         int j = i;
 
-        while(j > 0 && v[j-1] > v[j]){
-            swap(v[j-1], v[j]);
+        while(j >= 0 && v[j - 1] > v[j]){
+            swap(v[j] , v[j-1]);
             j--;
+
         }
     }
-
-    for(int i =0 ;i < n ; i ++){
-        cout << v[i] << " ";
-    }
-   
 }
 
 int main(){
@@ -32,5 +30,9 @@ int main(){
     }
 
     insertion(v , n);
+
+    for(int i =0 ; i < n ; i++){
+        cout << v[i] << " ";
+    }
 
 }
