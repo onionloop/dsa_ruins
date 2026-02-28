@@ -10,6 +10,18 @@ void merge(vector<int> &v , int low, int mid , int high){
     int left = low;
     int right = mid + 1;
      
+    while(left <= mid && right <= high){
+        if(v[right] >= v[left]){
+            temp.push_back(v[left]);
+            left++;
+        }
+
+        else (v[right] <= v[left]) {
+            temp.push_back(v[right]);
+            right++
+        }
+
+    }
 }
 
 

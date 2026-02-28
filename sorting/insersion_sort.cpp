@@ -1,9 +1,7 @@
 // Takes an element and places it in correct order
 
-
 #include <iostream>
 using namespace std;
-
 
 void insertion(vector <int> & v , int n){
 
@@ -21,7 +19,6 @@ void insertion(vector <int> & v , int n){
     }
    
 }
-
 
 int main(){
     
