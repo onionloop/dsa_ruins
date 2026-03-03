@@ -17,7 +17,7 @@ void bubble(vector <int> &v, int n){
         }
     }
 
-    if (didSwap = 0) return;
+    if (didSwap == 0) return;
 
     bubble(v, n - 1);
 }
@@ -34,6 +34,10 @@ int main(){
     }
 
     bubble(v, n);
+
+    for(int i =0 ; i < n ; i++){
+        cout << v[i] << " ";
+    }
 
     return 0;
 }
