@@ -16,36 +16,37 @@ vector <int> unionoArray(vector <int> &v1, vector <int> &v2){
     while(i < n1 && j < n2){
 
         if(v1[i] < v2[j]){
-            if(unionAns.back() != v1[i] || v1.size() == 0){
+            if(unionAns.empty() || unionAns.back() != v1[i]){
                 unionAns.push_back(v1[i]);
             }
             i++;
         }
 
         else{
-            if(unionAns.back() != v2[i] || v2.size() == 0){
-                unionAns.push_back(v2[i]);
+            if(unionAns.empty() || unionAns.back() != v2[j]){
+                unionAns.push_back(v2[j]);
             }
             j++;
         }
+    }
 
-        while(v1[i] < n1){
-            if(unionAns.back() != v1[i] || v1.size() == 0){
-                unionAns.push_back(v1[i]);
-            }
-            i++;
+    while(i < n1){
+        if(unionAns.empty() || unionAns.back() != v1[i]){
+            unionAns.push_back(v1[i]);
+        }
+        i++;
         }
 
-        while(v2[i] < n2){
-            if(unionAns.back() != v2[i] || v2.size() == 0){
-                unionAns.push_back(v2[i]);
-            }
-            j++;
+    while(j < n2){
+        if(unionAns.empty() || unionAns.back() != v2[j]){
+            unionAns.push_back(v2[j]);
+        }
+        j++;
         }
 
 
         
-        }
+        
 
         return unionAns;
     }
@@ -65,7 +66,7 @@ int main(){
     cin >> n2;
     vector <int> v2(n2);
 
-    for(int i =0 ; i < n ; i++){
+    for(int i =0 ; i < n2; i++){
         cin >> v2[i];
     }
 
