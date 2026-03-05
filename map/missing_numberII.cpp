@@ -7,6 +7,12 @@ using namespace std;
 
 int findMNum(vector <int> &v, int n){
 
+    unordered_map<int,int> mp;
+
+    for(int i =0 ; i< n ; i++){
+        mp[v[i]]++;
+    }
+
     
 }
 
