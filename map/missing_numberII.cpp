@@ -13,7 +13,11 @@ int findMNum(vector <int> &v, int n){
         mp[v[i]]++;
     }
 
-    
+    for(int i = 1; i <= n ; i++){
+        if(mp[i] == 0) return n;
+    }
+
+    return -1;
 }
 
 
