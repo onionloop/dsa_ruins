@@ -1,0 +1,36 @@
+    int closestNumber(int n, int m) {
+        
+        // FLOOR DIVISION (C++ truncates toward zero, not -infinity like Python)
+        // Ex: -15/6 = -2 in C++ (not -3)
+        // Ex:  13/4 =  3 in C++  ✅
+        int num = n / m;
+        
+        // n1 = FLOOR candidate
+        // This is the multiple of m just BELOW (or equal to) n
+        // Ex: n=13, m=4 → num=3 → n1 = 3*4 = 12  (floor side)
+        int n1 = num * m;
+        
+        int n2 = 0;
+        
+        if (n * m > 0)
+            // SAME SIGN → CEILING candidate is one step UP
+            // Ex: n=13, m=4 → n2 = (3+1)*4 = 16  (ceiling side)
+            n2 = (num + 1) * m;
+        else
+            // DIFF SIGN → ceiling is one step DOWN (due to C++ truncation)
+            // Ex: n=-15, m=6 → num=-2 → n2 = (-2-1)*6 = -18
+            // -18 is the floor side, -12 is ceiling (C++ truncated toward 0)
+            n2 = (num - 1) * m;
+        
+        // TIE CASE: both candidates equally close to n
+        // → return the one with MAX ABSOLUTE VALUE (furthest from zero)
+        // Ex: n=-15 → n1=-12, n2=-18
+        //     |-12|=12, |-18|=18 → return -18 ✅
+        if (abs(n - n1) == abs(n - n2))
+            return (abs(n1) > abs(n2)) ? n1 : n2;  // 🔥 compare n1,n2 not distances!
+        
+        // NORMAL CASE: return whichever candidate is closer to n
+        // Ex: n=13 → |13-12|=1, |13-16|=3 → return 12 ✅
+        return (abs(n - n1) < abs(n - n2)) ? n1 : n2;
+    }
+};
