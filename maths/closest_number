@@ -2,7 +2,8 @@
 #include <cmath>
 using namespace std;
     
-    
+class Solution {
+  public:
     int closestNumber(int n, int m) {
         
         // FLOOR DIVISION (C++ truncates toward zero, not -infinity like Python)
