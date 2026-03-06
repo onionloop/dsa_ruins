@@ -3,6 +3,32 @@
 #include <algorithm>
 using namespace std;
 
+
+bool isPalindrome(int n) {
+        // code here.
+        
+        int newN = n;
+        int ans = 0;
+        while(newN > 0){
+            
+            int last = newN % 10;
+            
+            ans = ans * 10 + last;
+            
+            newN /= 10;
+            
+        }
+        
+        
+        return ans == n;
+        
+        }
+
+
+/*
+
+============================ USING STL ============================
+
 bool palN(int n){
 
     string s = to_string(n);
@@ -13,6 +39,7 @@ bool palN(int n){
 
     return newStr == s;
 }
+*/
 
 int main(){
 
@@ -20,7 +47,7 @@ int main(){
 
     cin >> s;
 
-    cout << palN(s) << endl;
+    cout << isPalindrome(s) << endl;
 
     return 0;
 }
