@@ -28,4 +28,4 @@ int main(){
     cout << missinN(v, n) << endl;
 
     return 0;
-}
+}   
