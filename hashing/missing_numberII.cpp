@@ -4,7 +4,6 @@
 using namespace std;
 
 
-
 int findMNum(vector <int> &v, int n){
 
     unordered_map<int,int> mp;
@@ -19,12 +18,6 @@ int findMNum(vector <int> &v, int n){
 
     return -1;
 }
-
-
-
-
-
-
 
 
 int main(){
