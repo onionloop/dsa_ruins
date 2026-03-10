@@ -7,6 +7,7 @@ class NumArray{
 private:
     vector <int> prefix;
 
+    
 public:
 
     NumArray(vector <int> &v){
