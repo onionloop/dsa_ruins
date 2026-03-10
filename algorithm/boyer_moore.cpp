@@ -27,7 +27,6 @@ int majorityElement(vector <int> &v){
 
 }
 
-
 int main(){
 
     int n;
