@@ -19,7 +19,6 @@ int main(){
         cin >> v[i];
     }
 
-
     sort(v.begin() , v.end() , greater <int> ());
 
     for(int i =0 ; i <  n ; i ++){
