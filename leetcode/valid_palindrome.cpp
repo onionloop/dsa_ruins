@@ -13,7 +13,6 @@ bool palindrome(string s){
         }
     }
 
-
     return newStr == string(newStr.rbegin() ,  newStr.rend());
 }
 
