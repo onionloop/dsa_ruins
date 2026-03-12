@@ -10,9 +10,7 @@ vector <int> shuffle(vector <int> &v, int n){
         ans.push_back(v[i]);
         ans.push_back(v[n + i]);
     }
-
     return ans;
-    
 }
 
 int main(){
