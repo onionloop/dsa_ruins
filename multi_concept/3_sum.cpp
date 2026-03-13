@@ -9,7 +9,7 @@ vector <vector<int>> Tsum(vector <int> &v){
 
     sort(v.begin(), v.end());
 
-    vector <int> ans;
+    vector <vector<int>> ans;
 
     for(int i =0 ; i < v.size() ; i++){
 
