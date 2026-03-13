@@ -5,9 +5,9 @@
 #include <algorithm>
 using namespace std;
 
-vector <int> Tsum(vector <int> &v){
+vector <vector<int>> Tsum(vector <int> &v){
 
-    sort(v.begin(), end());
+    sort(v.begin(), v.end());
 
     vector <int> ans;
 
@@ -15,9 +15,9 @@ vector <int> Tsum(vector <int> &v){
 
         if(i > 0  && v[i] == v[i-1]) continue;
 
-    }
+    
 
-    int left = 0;
+    int left = i + 1;
     int right = v.size() - 1;
 
     while(left < right){
@@ -31,14 +31,22 @@ vector <int> Tsum(vector <int> &v){
         left++;
         right--;
 
-        while(left < right && v[i] == v[i+1]) left++;
-        while(left < right && v[i] == v[i - 1]) right--;
+        while(left < right && v[i] == v[left+1]) left++;
+        while(left < right && v[i] == v[right - 1]) right--;
     }
 
         else if(sum < 0) left++;
 
-        else right ++;
+        else right--;
     }
 
+
+}
+    return ans;
+}
+
+int main(){
+
+    
 }
 
