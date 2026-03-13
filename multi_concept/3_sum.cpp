@@ -46,7 +46,20 @@ vector <vector<int>> Tsum(vector <int> &v){
 }
 
 int main(){
-
+    vector<int> nums = {-1, 0, 1, 2, -1, -4};
     
+    vector<vector<int>> result = Tsum(nums);
+    
+    cout << "All unique triplets that sum to zero:\n";
+    for(const auto &triplet : result){
+        cout << "[";
+        for(size_t i = 0; i < triplet.size(); i++){
+            cout << triplet[i];
+            if(i != triplet.size() - 1) cout << ", ";
+        }
+        cout << "]\n";
+    }
+    
+    return 0;
 }
 
