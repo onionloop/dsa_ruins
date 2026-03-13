@@ -2,4 +2,11 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
+
+int Tsum(vetor <int> &v){
+
+    sort()
+
+}
