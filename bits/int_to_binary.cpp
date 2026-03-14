@@ -14,8 +14,21 @@ string decTobinary(int n){
         i++;
     }
 
-
+    string ans = "";
     for (int j = i - 1; j >= 0 ; j--){
-        
+        ans += to_lower(binary[j]);
     }
+
+    return ans;
+
+}
+
+int main(){
+
+    int i ;
+    cin >> i;
+
+    cout << decToBinary(i) << endl;
+
+    return 0;
 }
