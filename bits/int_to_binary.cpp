@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 string decTobinary(int n){
@@ -14,12 +15,12 @@ string decTobinary(int n){
         i++;
     }
 
-    string ans = "";
+    string s = "";
     for (int j = i - 1; j >= 0 ; j--){
-        ans += to_lower(binary[j]);
+        s += to_string(binary[j]);
     }
 
-    return ans;
+    return s;
 
 }
 
@@ -28,7 +29,7 @@ int main(){
     int i ;
     cin >> i;
 
-    cout << decToBinary(i) << endl;
+    cout << decTobinary(i) << endl;
 
     return 0;
 }
