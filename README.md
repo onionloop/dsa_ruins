@@ -59,7 +59,7 @@ status = "in_progress";
 
 <div align="center">
 
-
+*built in the ruins. forged in confusion. one commit at a time.*
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=onionloop.dsa_ruins)
 
