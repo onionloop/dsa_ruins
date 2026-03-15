@@ -20,7 +20,7 @@
 
 ---
 
-## ☠️ What is this?
+## 💁‍♂️About?
 
 This is my **DSA graveyard** — where algorithms come to be understood, broken, and eventually conquered. Written in **C++**. No hand-holding. Just raw problem solving.
 
@@ -47,46 +47,19 @@ dsa_ruins/
 └── multi_concept/   # When one topic just isn't enough pain
 ```
 
----
-
-## ⚔️ Progress
-
-| Topic | Status | Confidence |
-|-------|--------|------------|
-| Arrays | ✅ Active | 🟩🟩🟩🟨⬛ |
-| Two Pointers | ✅ Active | 🟩🟩🟩⬛⬛ |
-| Sliding Window | 🔄 In Progress | 🟩🟨⬛⬛⬛ |
-| Hashing | ✅ Active | 🟩🟩🟨⬛⬛ |
-| Recursion | ✅ Active | 🟩🟩⬛⬛⬛ |
-| Sorting | ✅ Surface | 🟩🟩⬛⬛⬛ |
-| DP | 🔄 Barely started | 🟨⬛⬛⬛⬛ |
-| Graphs | ❌ Not yet | ⬛⬛⬛⬛⬛ |
-
----
-
 ## 🧠 Currently Conquering
 
 ```cpp
 // Current focus
 topic = "Sliding Window + Two Pointers";
 status = "in_progress";
-mood = "send help";
 ```
 
----
 
-## 📌 Rules I Set For Myself
-
-- solve first, look up later
-- understand the pattern, not just the solution
-- one problem a day keeps unemployment away
-- commit messages will be meaningful (eventually)
-
----
 
 <div align="center">
 
-*built in the ruins. forged in confusion. one commit at a time.*
+
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=onionloop.dsa_ruins)
 
