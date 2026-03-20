@@ -19,5 +19,17 @@ int maxSubArray(vector <int> ans){
 }
 
 int main(){
-    
+
+    int n;
+    cin >> n;
+
+    vector <int> v(n);
+
+    for(int i =0 ; i < n ; i++){
+        cin >> v[i] ; 
+    }
+
+    cout << maxSubArray << endl;
+
+    return 0;
 }
