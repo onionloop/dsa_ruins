@@ -2,13 +2,14 @@
 #include <string>
 using namespace std;
 
-string decToBinary(int n){
+int decToBinary(int n){
 
-    string ans = "";
+    int ans = 1;
+    int carry = 1;
     while(n > 0){
         int rem = n % 2;
-        ans = to_string(rem) + ans;
-        n /= 2;
+        ans += rem * carry;
+        n /= 10;
     }
 
     return ans;
