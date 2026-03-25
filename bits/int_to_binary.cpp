@@ -4,12 +4,13 @@ using namespace std;
 
 int decToBinary(int n){
 
-    int ans = 1;
+    int ans = 0;
     int carry = 1;
     while(n > 0){
         int rem = n % 2;
         ans += rem * carry;
-        n /= 10;
+        n /= 2;
+        carry *= 10;
     }
 
     return ans;
