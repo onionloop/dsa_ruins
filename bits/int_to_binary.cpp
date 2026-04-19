@@ -2,22 +2,24 @@
 #include <string>
 using namespace std;
 
+
 int decToBinary(int n){
 
+
+    
+    int rem = 1;
     int ans = 0;
-    int carry = 1;
     while(n > 0){
-        int rem = n % 2;
-        ans += rem * carry;
+        int last = n % 2;
+        ans = ans + last*rem;
         n /= 2;
-        carry *= 10;
+        rem *= 10;
     }
 
     return ans;
+
+
 }
-
-
-
 
 int main(){
 
