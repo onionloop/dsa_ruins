@@ -16,6 +16,8 @@ int main(){
 
     vector <int> arr = {2, 5, 8, 7};
     Node *y = new Node(arr[0], nullptr);
+    Node *n3 = new Node(8, nullptr);
+    Node *n2 = newNode
     cout << y << endl;
 }
 
